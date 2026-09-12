@@ -1,252 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khalid Bouzalmda | Industrial Engineering Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khalid Bouzalmda — Industrial Engineering, Supply Chain &amp; Process Optimization</title>
+<meta name="description" content="Portfolio of Khalid Bouzalmda — final-year industrial engineering student specializing in supply chain, reliability and process optimization.">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- HEADER / NAVIGATION (Onglets) -->
-    <header class="navbar">
-        <div class="logo">
-            <span class="logo-name">KHALID Bouzalmda</span>
-            <span class="logo-title">INDUSTRIAL ENGINEERING STUDENT</span>
+<header>
+  <div class="wrap header-row">
+    <div class="id" data-goto="home">Khalid Bouzalmda<span class="id-sub">Industrial Engineering — Supply Chain</span></div>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+    <nav id="nav">
+      <button class="tab-link" data-goto="home">Home</button>
+      <button class="tab-link" data-goto="about">About</button>
+      <button class="tab-link" data-goto="projects">Projects</button>
+      <button class="tab-link" data-goto="experience">Experience</button>
+      <button class="tab-link" data-goto="skills">Skills</button>
+      <button class="tab-link" data-goto="documents">Documents</button>
+      <button class="tab-link" data-goto="contact">Contact</button>
+    </nav>
+    <div class="header-actions">
+      <span class="pfe-chip">PFE search — Feb 2027</span>
+      <a class="btn btn-solid" href="cv.pdf" download>Download CV</a>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">◐</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HOME ============ -->
+<main id="page-home" class="page" data-page="home">
+
+  <section class="hero-section">
+    <div class="wrap hero">
+      <div>
+        <span class="role-tag">Open to internships &amp; PFE — 2027</span>
+        <h1 class="headline">Turning warehouse and reliability data into decisions a team can act on.</h1>
+        <p class="hero-sub">Final-year Industrial Engineering student (ENSA Safi), focused on supply chain, stock management and flow optimization — from a Gemba walk and a DMAIC diagnostic to a working simulation model.</p>
+        <div class="hero-cta">
+          <button class="btn btn-solid" data-goto="projects">View projects</button>
+          <button class="btn" data-goto="contact">Get in touch</button>
         </div>
-        <nav class="nav-links">
-            <button class="tab-btn active" onclick="openTab(event, 'About')">About</button>
-            <button class="tab-btn" onclick="openTab(event, 'Education')">Education</button>
-            <button class="tab-btn" onclick="openTab(event, 'Experience')">Experience</button>
-            <button class="tab-btn" onclick="openTab(event, 'Skills')">Skills</button>
-            <button class="tab-btn" onclick="openTab(event, 'Projects')">Projects</button>
-            <button class="tab-btn" onclick="openTab(event, 'Certificates')">Certificates</button>
-            <button class="tab-btn" onclick="openTab(event, 'Contact')">Contact</button>
-        </nav>
-        <div class="nav-action">
-            <a href="cv.pdf" target="_blank" class="btn btn-primary"><i class="fas fa-download"></i> CV</a>
+      </div>
+      <div class="hero-visual">
+        <div class="photo-frame">
+          <span class="frame-tick tl"></span><span class="frame-tick br"></span>
+          <img src="profile.jpg" alt="Khalid Bouzalmda">
+          <div class="pin-stat"><b>×4.6</b><span>lead-time factor between low- and high-congestion periods, ~21,600 order lines (INGELEC)</span></div>
         </div>
-    </header>
+      </div>
+    </div>
+    <div class="wrap flow-block">
+      <svg class="flow-svg" viewBox="0 0 900 100" xmlns="http://www.w3.org/2000/svg">
+        <line x1="10" y1="50" x2="890" y2="50" stroke="#CBC9C0" stroke-width="1"/>
+        <path class="flow-line" d="M10,50 L890,50" stroke="#2E5C86" stroke-width="2" fill="none"/>
+        <circle cx="10" cy="50" r="4" fill="#14181B"/><circle cx="450" cy="50" r="4" fill="#2E5C86"/><circle cx="890" cy="50" r="4" fill="#14181B"/>
+        <text x="0" y="30" font-family="IBM Plex Mono" font-size="11" fill="#565D63">SAP: Bon de Prélèvement</text>
+        <text x="378" y="30" font-family="IBM Plex Mono" font-size="11" fill="#565D63">Picking &amp; order prep</text>
+        <text x="760" y="30" font-family="IBM Plex Mono" font-size="11" fill="#565D63">SAP: Bon de Livraison</text>
+      </svg>
+      <div class="flow-caption">The lead-time gap studied during the INGELEC PFA — the process behind the ×4.6 figure above.</div>
+    </div>
+    <hr class="rule">
+  </section>
 
-    <!-- MAIN CONTENT AREA -->
-    <main class="content-container">
+  <section class="block">
+    <div class="wrap">
+      <div class="snapshot">
+        <div class="snap-tile">
+          <svg class="snap-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg>
+          <h4>Supply Chain &amp; Logistics</h4><p>Flow optimization, inventory management, warehouse efficiency</p>
+        </div>
+        <div class="snap-tile">
+          <svg class="snap-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.5 1z"/></svg>
+          <h4>Maintenance &amp; Reliability</h4><p>Failure analysis, Pareto/Ishikawa, preventive maintenance planning</p>
+        </div>
+        <div class="snap-tile">
+          <svg class="snap-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 2 5-6"/></svg>
+          <h4>Lean &amp; Continuous Improvement</h4><p>DMAIC, Kaizen, PDCA, root-cause problem solving</p>
+        </div>
+        <div class="snap-tile">
+          <svg class="snap-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="4" height="10"/><rect x="10" y="6" width="4" height="14"/><rect x="16" y="13" width="4" height="7"/></svg>
+          <h4>Data &amp; Simulation</h4><p>Python, SQL, discrete-event and Monte Carlo modeling</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="rule">
 
-        <!-- 1. ABOUT TAB (No scrolling, just photo and text) -->
-        <section id="About" class="tab-content active">
-            <div class="about-fullscreen">
-                <div class="about-image-container">
-                    <!-- Make sure profile.jpg is uploaded to GitHub -->
-                    <img src="profile.jpg" alt="Khalid Bouzalmda" class="profile-photo" onerror="this.src='https://via.placeholder.com/400x500?text=Upload+profile.jpg'">
-                </div>
-                <div class="about-text-container">
-                    <div class="breadcrumbs">PEOPLE &times; PROCESSES &times; PERFORMANCE</div>
-                    <h1 class="hero-title">Engineering<br>better <span class="highlight">systems.</span></h1>
-                    <p class="hero-subtitle">Final-year Industrial Engineering student at ENSA Safi. I am passionate about improving industrial performance through Lean methodologies, reliability engineering, logistics, and data analysis.</p>
-                    <p class="hero-subtitle">I bridge the gap between shop-floor diagnostics and data-driven models using tools like Python, Excel/VBA, and simulation software.</p>
-                    <div class="quick-facts">
-                        <p><i class="fas fa-map-marker-alt"></i> Casablanca, Morocco</p>
-                        <p><i class="fas fa-graduation-cap"></i> Seeking PFE — February 2027</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="htitle"><span class="bar"></span><h2>Featured work</h2></div>
+        <span class="sec-idx">2 of 5 projects</span>
+      </div>
+      <div class="featured-grid">
 
-        <!-- 2. EDUCATION TAB -->
-        <section id="Education" class="tab-content">
-            <div class="section-header">
-                <h2 class="section-title">Education</h2>
-                <span class="section-subtitle">ACADEMIC BACKGROUND</span>
+        <div class="proj-card">
+          <div class="proj-topbar"><span>SIMULATION · 2025</span><span class="featured-badge">Featured</span></div>
+          <img class="proj-img" src="flexsim-warehouse.png" alt="FlexSim 3D warehouse simulation with racks, transporters and operators">
+          <div class="proj-body">
+            <div class="proj-title">Warehouse Congestion Simulation</div>
+            <div class="proj-desc">FlexSim 3D model + Python/SimPy discrete-event model calibrated against real SAP data.</div>
+            <div class="stat-row">
+              <div class="stat-box"><b>×4.6</b><span>congestion vs. order-size effect</span></div>
+              <div class="stat-box"><b>21.6k</b><span>order lines analyzed</span></div>
             </div>
-            <div class="timeline">
-                <div class="tl-item">
-                    <div class="tl-date">2025 - 2027</div>
-                    <div class="tl-content">
-                        <div class="tl-header">
-                            <h3>Diplôme d'Ingénieur d'État en Génie Industriel</h3>
-                        </div>
-                        <p class="tl-org">ENSA — Safi</p>
-                    </div>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-date">2024 - 2025</div>
-                    <div class="tl-content">
-                        <div class="tl-header">
-                            <h3>Licence Sciences et Techniques — Génie Mécanique</h3>
-                            <span class="tl-badge">Mention Bien</span>
-                        </div>
-                        <p class="tl-org">FST — Mohammedia</p>
-                    </div>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-date">2021 - 2024</div>
-                    <div class="tl-content">
-                        <div class="tl-header">
-                            <h3>DEUST Sciences et Techniques</h3>
-                        </div>
-                        <p class="tl-org">FST — Mohammedia</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <div class="proj-tags"><span class="tag">FlexSim</span><span class="tag">SimPy</span></div>
+          </div>
+        </div>
 
-        <!-- 3. EXPERIENCE TAB -->
-        <section id="Experience" class="tab-content">
-            <div class="section-header">
-                <h2 class="section-title">Experience</h2>
-                <span class="section-subtitle">LEARNING TODAY. CONTRIBUTING TOMORROW.</span>
+        <div class="proj-card">
+          <div class="proj-topbar"><span>APPLICATION · Academic</span></div>
+          <img class="proj-img" src="stockpro-dashboard.jpeg" alt="StockPro dashboard showing service rate, stock value and category breakdown">
+          <div class="proj-body">
+            <div class="proj-title">StockPro</div>
+            <div class="proj-desc">Multi-warehouse stock &amp; procurement app — alerts, supplier KPIs, automatic PDF reporting.</div>
+            <div class="stat-row">
+              <div class="stat-box simulated"><b>−20%</b><span>stockouts (simulated)</span></div>
+              <div class="stat-box simulated"><b>−12%</b><span>storage cost (simulated)</span></div>
             </div>
-            <div class="timeline">
-                <div class="tl-item">
-                    <div class="tl-date">Jul 2026 - Aug 2026</div>
-                    <div class="tl-content">
-                        <div class="tl-header">
-                            <h3>Intern — Logistics & Process Simulation</h3>
-                            <span class="tl-badge">Supply Chain</span>
-                        </div>
-                        <p class="tl-org">INGELEC</p>
-                        <p>Study and improvement of picking processes. Data analysis, DMAIC methodology, and creation of a Python Streamlit simulation model.</p>
-                    </div>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-date">Apr 2025 - Jun 2025</div>
-                    <div class="tl-content">
-                        <div class="tl-header">
-                            <h3>Stage de Fin d'Études — Reliability Improvement</h3>
-                            <span class="tl-badge">Industrial Maintenance</span>
-                        </div>
-                        <p class="tl-org">OCP Group</p>
-                        <p>Analysis of failures on Komatsu 730E trucks. Application of Pareto and Ishikawa methods, development of a preventive maintenance plan.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <div class="proj-tags"><span class="tag">Python</span><span class="tag">SQLite</span></div>
+          </div>
+        </div>
 
-        <!-- 4. SKILLS TAB -->
-        <section id="Skills" class="tab-content">
-            <div class="section-header">
-                <h2 class="section-title">Skills & Methodology</h2>
-                <span class="section-subtitle">TURNING DATA INTO REAL IMPACT</span>
-            </div>
-            <div class="snapshot-grid">
-                <div class="snap-card">
-                    <i class="fas fa-chart-bar snap-icon"></i>
-                    <div class="snap-text">
-                        <h3>Lean & Continuous Improvement</h3>
-                        <p>Process optimization, DMAIC, waste reduction</p>
-                    </div>
-                </div>
-                <div class="snap-card">
-                    <i class="fas fa-cogs snap-icon"></i>
-                    <div class="snap-text">
-                        <h3>Maintenance & Reliability</h3>
-                        <p>Equipment reliability, root cause analysis, AMDEC</p>
-                    </div>
-                </div>
-                <div class="snap-card">
-                    <i class="fas fa-box-open snap-icon"></i>
-                    <div class="snap-text">
-                        <h3>Logistics & Supply Chain</h3>
-                        <p>Flows optimization, inventory management</p>
-                    </div>
-                </div>
-                <div class="snap-card">
-                    <i class="fas fa-database snap-icon"></i>
-                    <div class="snap-text">
-                        <h3>Data Analysis & Tools</h3>
-                        <p>Python, Excel/VBA, Power BI, SQL, FlexSim</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      </div>
+      <div class="view-all-row"><button class="btn" data-goto="projects">View all 5 projects</button></div>
+    </div>
+  </section>
+  <hr class="rule">
 
-        <!-- 5. PROJECTS TAB -->
-        <section id="Projects" class="tab-content">
-            <div class="section-header">
-                <h2 class="section-title">Selected Projects</h2>
-                <span class="section-subtitle">REAL PROBLEMS. REAL ANALYSIS.</span>
-            </div>
-            <div class="projects-grid">
-                <!-- PROJET 1 -->
-                <div class="project-card">
-                    <div class="pc-header dark">
-                        <span class="pc-category"><i class="fas fa-tools"></i> MAINTENANCE & RELIABILITY</span>
-                        <span class="pc-date">2025</span>
-                    </div>
-                    <div class="pc-body">
-                        <img src="pareto-chart.png" alt="Pareto Chart" class="project-image" onerror="this.src='https://via.placeholder.com/600x300?text=Upload+pareto-chart.png'">
-                        <h3 class="project-name">Improvement of Komatsu 730E Trucks Reliability</h3>
-                        <p class="project-org">OCP Group</p>
-                        <p class="project-desc">Analysis of failure history to identify the 3 major causes responsible for 65% of stoppages. Implementation of a preventive maintenance plan and MRP study.</p>
-                    </div>
-                </div>
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><div class="htitle"><span class="bar"></span><h2>How I work through a problem</h2></div></div>
+      <div class="method-row">
+        <div class="method-step"><svg class="method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg><span class="step-num">01</span><h4>Observe</h4><p>Floor walk, process mapping, data collection at the source</p></div>
+        <div class="method-step"><svg class="method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17l4-4 3 2 6-7 5 5"/><path d="M3 21h18"/></svg><span class="step-num">02</span><h4>Measure</h4><p>Quantify the gap — lead time, downtime, defect rate</p></div>
+        <div class="method-step"><svg class="method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="10" r="6.5"/><path d="M15 15l5 5"/></svg><span class="step-num">03</span><h4>Analyze</h4><p>Pareto, Ishikawa, 5 Why to isolate root causes</p></div>
+        <div class="method-step"><svg class="method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l7-7 4 4 5-6"/><path d="M15 8h5v5"/></svg><span class="step-num">04</span><h4>Improve</h4><p>Model and test scenarios before recommending a change</p></div>
+        <div class="method-step"><svg class="method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 11l2 2 4-4"/></svg><span class="step-num">05</span><h4>Report</h4><p>Document results honestly, including what didn't work</p></div>
+      </div>
+    </div>
+  </section>
+  <hr class="rule">
 
-                <!-- PROJET 2 -->
-                <div class="project-card">
-                    <div class="pc-header dark">
-                        <span class="pc-category"><i class="fas fa-truck"></i> LOGISTICS & SUPPLY CHAIN</span>
-                        <span class="pc-date">2026</span>
-                    </div>
-                    <div class="pc-body">
-                        <img src="vsm-diagram.png" alt="Process Map" class="project-image" onerror="this.src='https://via.placeholder.com/600x300?text=Upload+vsm-diagram.png'">
-                        <h3 class="project-name">Warehouse Process Optimization & Simulation</h3>
-                        <p class="project-org">INGELEC & StockPro</p>
-                        <p class="project-desc">Diagnosed and modeled the finished-goods order-preparation process. Built a 3D simulation and a Python discrete-event model to reduce stockouts and lead times.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><div class="htitle"><span class="bar"></span><h2>Tools &amp; methods</h2></div></div>
+      <div class="tool-grid">
+        <div class="tool-badge"><span class="tool-mono">Py</span><span>Python</span></div>
+        <div class="tool-badge"><span class="tool-mono">SQL</span><span>SQL</span></div>
+        <div class="tool-badge"><span class="tool-mono">Ex</span><span>Excel / VBA</span></div>
+        <div class="tool-badge"><span class="tool-mono">SAP</span><span>SAP</span></div>
+        <div class="tool-badge"><span class="tool-mono">FS</span><span>FlexSim</span></div>
+        <div class="tool-badge"><span class="tool-mono">Mt</span><span>Minitab</span></div>
+        <div class="tool-badge"><span class="tool-mono">SW</span><span>SolidWorks</span></div>
+        <div class="tool-badge"><span class="tool-mono">6σ</span><span>Lean Six Sigma</span></div>
+      </div>
+    </div>
+  </section>
+  <hr class="rule">
 
-        <!-- 6. CERTIFICATES TAB -->
-        <section id="Certificates" class="tab-content">
-            <div class="section-header">
-                <h2 class="section-title">Certificates</h2>
-                <span class="section-subtitle">CONTINUOUS LEARNING</span>
-            </div>
-            <div class="docs-grid">
-                <div class="doc-card" style="padding: 30px; text-align: center;">
-                    <i class="fas fa-certificate" style="font-size: 3rem; color: var(--primary-orange); margin-bottom: 15px;"></i>
-                    <h3 style="margin-bottom: 10px;">Lean Six Sigma</h3>
-                    <p>White Belt Certification in Manufacturing</p>
-                </div>
-                <div class="doc-card" style="padding: 30px; text-align: center;">
-                    <i class="fas fa-certificate" style="font-size: 3rem; color: var(--primary-orange); margin-bottom: 15px;"></i>
-                    <h3 style="margin-bottom: 10px;">Siemens Mobility</h3>
-                    <p>Operations Industrial Engineer Job Simulation</p>
-                </div>
-                <div class="doc-card" style="padding: 30px; text-align: center;">
-                    <i class="fas fa-certificate" style="font-size: 3rem; color: var(--primary-orange); margin-bottom: 15px;"></i>
-                    <h3 style="margin-bottom: 10px;">FORD-EV</h3>
-                    <p>Engineering Advanced Job Simulation</p>
-                </div>
-            </div>
-        </section>
+  <section class="block contact-cta">
+    <div class="wrap">
+      <div class="sec-head"><div class="htitle"><span class="bar"></span><h2>Let's talk</h2></div></div>
+      <div class="contact-inner">
+        <p>Open to internships and first opportunities in supply chain, procurement and stock management — and to a PFE from February 2027.</p>
+        <button class="btn btn-solid" data-goto="contact">Contact me</button>
+      </div>
+    </div>
+  </section>
+</main>
 
-        <!-- 7. CONTACT TAB -->
-        <section id="Contact" class="tab-content">
-            <div class="section-header">
-                <h2 class="section-title">Contact</h2>
-                <span class="section-subtitle">LET'S CONNECT</span>
-            </div>
-            <div class="about-fullscreen" style="align-items: flex-start;">
-                <div class="about-text-container" style="flex: 1;">
-                    <h3 style="font-size: 2rem; margin-bottom: 20px;">Open to opportunities.</h3>
-                    <p style="margin-bottom: 30px; color: var(--text-gray); font-size: 1.1rem;">I am currently looking for a final year internship (PFE) starting February 2027 in Supply Chain, Operations, or Data-driven Engineering.</p>
-                    
-                    <div style="display: flex; flex-direction: column; gap: 20px;">
-                        <a href="mailto:bouzalmdakhalid2@gmail.com" style="display: flex; align-items: center; gap: 15px; font-size: 1.2rem; font-weight: 600;"><i class="fas fa-envelope" style="color: var(--primary-orange); font-size: 1.5rem;"></i> bouzalmdakhalid2@gmail.com</a>
-                        <a href="tel:+212631730126" style="display: flex; align-items: center; gap: 15px; font-size: 1.2rem; font-weight: 600;"><i class="fas fa-phone" style="color: var(--primary-orange); font-size: 1.5rem;"></i> 06 31 73 01 26</a>
-                        <a href="https://linkedin.com/in/[TON-LIEN]" target="_blank" style="display: flex; align-items: center; gap: 15px; font-size: 1.2rem; font-weight: 600;"><i class="fab fa-linkedin" style="color: var(--primary-orange); font-size: 1.5rem;"></i> LinkedIn Profile</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- ============ ABOUT ============ -->
+<main id="page-about" class="page" data-page="about">
+  <section class="block" style="padding-top:48px;">
+    <div class="wrap">
+      <div class="sec-head"><div class="htitle"><span class="bar"></span><h2>Profile</h2></div><span class="sec-idx">01 — about</span></div>
+      <p class="sec-note" style="font-size:15.5px; max-width:66ch;">
+        Final-year Industrial Engineering student at ENSA Safi, oriented toward supply chain, stock management and flow optimization. Experience in stock monitoring, industrial data analysis, demand forecasting and tooling — Excel/VBA, Python and SQL. Comfortable moving from a floor diagnostic to a data model a team can actually use. Currently looking for an internship or opportunity in supply chain, procurement or stock management, ahead of a PFE starting February 2027.
+      </p>
+    </div>
+  </section>
+  <hr class="rule">
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><div class="htitle"><span class="bar"></span><h2>Qualities &amp; languages</h2></div></div>
+      <div class="two-col">
+        <div>
+          <span class="col-label">Qualities</span>
+          <ul style="display:flex; flex-direction:column; gap:8px;">
+            <li style="font-size:14.5px; color:var(--ink-soft);">Leadership &amp; project steering</li>
+            <li style="font-size:14.5px; color:var(--ink-soft);">Autonomy &amp; initiative</li>
+            <li style="font-size:14.5px; color:var(--ink-soft);">Analytical rigor &amp; structured approach</li>
+            <li style="font-size:14.5px; color:var(--ink-soft);">Adaptability &amp; flexibility</li>
+          </ul>
+          <span class="col-label" style="margin-top:24px;">Outside the classroom</span>
+          <p style="font-size:14.5px; color:var(--ink-soft);">Member, Génie Industriel club — ENSA Safi.<br>Member, kickboxing / martial arts association.</p>
+        </div>
+        <div>
+          <span class="col-label">Languages</span>
+          <div class="lang-item"><span>Arabic</span><span>Bilingual</span></div>
+          <div class="lang-item"><span>French</span><span>Advanced</span></div>
+          <div class="lang-item"><span>English</span><span>Advanced</span></div>
+          <div class="lang-item"><span>Spanish</span><span>Beginner</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-    </main>
+<!-- ============ PROJECTS ============ -->
+<main id="page-projects" class="page" data-page="projects">
+  <section class="block" style="padding-top:48px;">
+    <div class="wrap">
+      <div class="sec-head"><div class="htitle"><span class="bar"></span><h2>Selected projects</h2></div><span class="sec-idx">03 — projects</span></div>
+      <div class="projects-grid">
 
-    <script src="script.js"></script>
+        <div class="proj-card">
+          <div class="proj-topbar"><span>SIMULATION · 2025</span><span class="featured-badge">Featured</span></div>
+          <img class="proj-img" src="flexsim-warehouse.png" alt="FlexSim 3D warehouse simulation with racks, transporters and operators">
+          <div class="proj-body">
+            <div class="proj-title">Warehouse Congestion Simulation</div>
+            <div class="proj-desc">3D scenario simulation (FlexSim) of the picking flow at INGELEC, plus a Python/SimPy discrete-event model calibrated against real SAP data.</div>
+            <div class="stat-row">
+              <div class="stat-box"><b>×4.6</b><span>congestion vs. order-size effect</span></div>
+              <div class="stat-box"><b>21.6k</b><span>order lines analyzed</span></div>
+            </div>
+            <div class="proj-spec">
+              <div><span>Approach</span><p>DMAIC + FlexSim / SimPy scenario testing</p></div>
+              <div><span>Result</span><p>Congestion isolated as the dominant driver, not order size</p></div>
+            </div>
+            <div class="proj-tags"><span class="tag">FlexSim</span><span class="tag">Python</span><span class="tag">SimPy</span></div>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-topbar"><span>APPLICATION · 2025</span></div>
+          <img class="proj-img" src="ingelec-simulateur-dashboard.png" alt="Streamlit dashboard showing congestion's impact on lead time and order volume by hour">
+          <div class="proj-body">
+            <div class="proj-title">Ingelec Simulateur</div>
+            <div class="proj-desc">Multi-page Streamlit app built on the simulation engine above — scenario comparison, source-data exploration and a warehouse layout view, extended into a Monte Carlo scenario engine.</div>
+            <div class="proj-spec">
+              <div><span>Approach</span><p>Streamlit app on top of the SimPy model</p></div>
+              <div><span>Result</span><p>Root-cause levers testable before recommending a change</p></div>
+            </div>
+            <div class="proj-tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Monte Carlo</span></div>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-topbar"><span>APPLICATION · Academic</span></div>
+          <img class="proj-img" src="stockpro-dashboard.jpeg" alt="StockPro dashboard showing service rate, stock value, sales trend and category breakdown">
+          <div class="proj-body">
+            <div class="proj-title">StockPro</div>
+            <div class="proj-desc">Multi-warehouse stock and procurement management app (Python, SQLite). Stock-level tracking and stockout alerts, purchase-order management, supplier performance via delay/reliability KPIs, and automatic PDF reporting.</div>
+            <div class="stat-row">
+              <div class="stat-box simulated"><b>−20%</b><span>stockouts (simulated)</span></div>
+              <div class="stat-box simulated"><b>−12%</b><span>storage cost (simulated)</span></div>
+            </div>
+            <div class="proj-spec">
+              <div><span>Approach</span><p>Built a multi-warehouse tracking &amp; alerting app from scratch</p></div>
+              <div><span>Tools</span><p>Python, Streamlit, SQLite</p></div>
+            </div>
+            <div class="proj-tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">SQLite</span></div>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-topbar"><span>SIMULATION · Academic</span></div>
+          <div class="proj-media dual">
+            <img class="proj-img" src="binayate-scenario-comparison.png" alt="Comparison chart of building energy consumption between base and optimized scenarios">
+            <img class="proj-img" src="binayate-building.jpg" alt="Administrative building studied in the energy efficiency project">
+          </div>
+          <div class="proj-body">
+            <div class="proj-title">Building Energy Efficiency Study</div>
+            <div class="proj-desc">Comparative thermal-performance study (RTCM / BECTH / Binayate) of a base scenario (no insulation, single glazing) against an optimized scenario (full insulation, double glazing, improved COP).</div>
+            <div class="stat-row">
+              <div class="stat-box"><b>−25%</b><span>48.45 → 36.15 kWh/m²/yr</span></div>
+            </div>
+            <div class="proj-tags"><span class="tag">Binayate</span><span class="tag">RTCM</span></div>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-topbar"><span>TOOL · Academic</span></div>
+          <div class="proj-body" style="padding-top:20px;">
+            <div class="proj-title">Stock Management Tool — Excel VBA</div>
+            <div class="proj-desc">Automated stock-tracking tool covering entries/exits, alerts, suppliers and clients, built entirely in Excel/VBA for teams without access to a dedicated system.</div>
+            <div class="proj-spec">
+              <div><span>Approach</span><p>Automated entries/exits log with threshold-based alerts</p></div>
+              <div><span>Tools</span><p>Excel, VBA</p></div>
+            </div>
+            <div class="proj-tags"><span class="tag">Excel</span><span class="tag">VBA</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ EXPERIENCE ============ -->
+<main id="page-experience" class="page" data-page="experience">
+  <section class="block" style="padding-top:48px;">
+    <div class="wrap">
+      <div class="sec-head"><div class="htitle"><span class="bar"></span><h2>Experience</h2></div><span class="sec-idx">04 — experience</span></div>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <div class="tl-date mono">2025 — 2026</div>
+          <div class="tl-role">PFA Intern — Finished Goods Logistics</div>
+          <div class="tl-org">INGELEC</div>
+          <div class="tl-body">
+            Diagnosed and modeled the finished-goods order-preparation process (Magasin Produits Finis), targeting the lead time between the SAP <em>Bon de Prélèvement</em> and <em>Bon de Livraison</em> generation.
+            <ul>
+              <li>Applied a full DMAIC approach on ~21,600 order lines, isolating warehouse congestion — not order size — as the dominant lead-time driver.</li>
+              <li>Built a 3D scenario simulation (FlexSim) and a Python discrete-event model (SimPy) calibrated against real SAP data, then extended it into a Monte Carlo scenario engine (Streamlit) to test root-cause levers before recommending changes.</li>
+              <li>Tested an arrival-smoothing scenario showing a measurable improvement, and reported a negative/null result (FIFO vs. SPT) alongside it rather than only the favorable finding.</li>
+            </ul>
+          </div>
+          <div class="kpi-row">
+            <div class="kpi"><b>×4.6</b><span>congestion vs. order-size effect</span></div>
+            <div class="kpi"><b>21.6k</b><span>order lines analyzed</span></div>
+            <div class="kpi"><b>3</b><span>models built (FlexSim, SimPy, Monte&nbsp;Carlo)</span></div>
+          </div>
+          <div class="tl-tags"><span class="tag">SAP</span><span class="tag">DMAIC</span><span class="tag">FlexSim</span><span class="tag">Python / SimPy</span><span class="tag">Monte Carlo</span><span class="tag">Streamlit</span></div>
+        </div>
+
+        <div class="tl-item">
+          <span class="tl-dot"></span>
+          <div class="tl-date mono">Apr — Jun 2025</div>
+          <div class="tl-role">Stage de Fin d'Études — Reliability Improvement, Komatsu 730E</div>
+          <div class="tl-org">OCP Group</div>
+          <div class="tl-body">
+            Studied the reliability of Komatsu 730E haul trucks to reduce unplanned downtime.
+            <ul>
+              <li>Analyzed failure history and identified the 3 root causes responsible for 65% of equipment stoppages (Pareto + Ishikawa, 5P).</li>
+              <li>Set up a preventive maintenance plan and reviewed the existing MRP.</li>
+              <li>Proposed corrective actions to improve equipment availability.</li>
+            </ul>
+          </div>
+          <div class="kpi-row">
+            <div class="kpi"><b>65%</b><span>of stoppages explained by 3 causes</span></div>
+            <div class="kpi"><b>Pareto</b><span>+ Ishikawa, 5P</span></div>
+          </div>
+          <div class="tl-tags"><span class="tag">Pareto</span><span class="tag">Ishikawa</span><span class="tag">Preventive Maintenance</span><span class="tag">MRP</span></div>
+        </div>
+
+        <div class="tl-item future">
+          <span class="tl-dot"></span>
+          <div class="tl-date mono">Feb 2027 →</div>
+          <div class="tl-role">Final Year Project (PFE) — to be defined</div>
+          <div class="tl-org">Open to opportunities</div>
+          <div class="tl-body">Looking for a PFE in industrial engineering, supply chain, reliability or data-driven operations.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ SKILLS ============ -->
+<main id="page-skills" class="page" data-page="skills">
+  <section class="block" style="padding-top:48px;">
+    <div class="wrap">
+      <div class="sec-head"><div class="htitle"><span class="bar"></span><h2>Skills &amp; tools</h2></div><span class="sec-idx">05 — skills</span></div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Domains</h3>
+          <ul>
+            <li>Supply chain &amp; logistics</li>
+            <li>Production &amp; planning (PIC/PDP, MRP, GPAO)</li>
+            <li>Quality &amp; Lean (Kaizen, PDCA, DMAIC)</li>
+            <li>Data &amp; decision support</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Programming &amp; data</h3>
+          <ul>
+            <li>Python, SQL, VBA, C, MATLAB</li>
+            <li>Minitab — industrial statistics</li>
+            <li>Excel — advanced</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Systems &amp; design</h3>
+          <ul>
+            <li>SAP, Odoo, Impact8, CPLEX (IBM)</li>
+            <li>SolidWorks, CATIA</li>
+            <li>Binayate, Zelio2</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="rule">
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><div class="htitle"><span class="bar"></span><h2>Tools in practice</h2></div></div>
+      <div class="tool-grid">
+        <div class="tool-badge"><span class="tool-mono">Py</span><span>Python</span></div>
+        <div class="tool-badge"><span class="tool-mono">SQL</span><span>SQL</span></div>
+        <div class="tool-badge"><span class="tool-mono">Ex</span><span>Excel / VBA</span></div>
+        <div class="tool-badge"><span class="tool-mono">SAP</span><span>SAP</span></div>
+        <div class="tool-badge"><span class="tool-mono">FS</span><span>FlexSim</span></div>
+        <div class="tool-badge"><span class="tool-mono">Mt</span><span>Minitab</span></div>
+        <div class="tool-badge"><span class="tool-mono">SW</span><span>SolidWorks</span></div>
+        <div class="tool-badge"><span class="tool-mono">CA</span><span>CATIA</span></div>
+        <div class="tool-badge"><span class="tool-mono">Od</span><span>Odoo</span></div>
+        <div class="tool-badge"><span class="tool-mono">CP</span><span>CPLEX</span></div>
+        <div class="tool-badge"><span class="tool-mono">Bn</span><span>Binayate</span></div>
+        <div class="tool-badge"><span class="tool-mono">6σ</span><span>Lean Six Sigma</span></div>
+      </div>
+    </div>
+  </section>
+  <hr class="rule">
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><div class="htitle"><span class="bar"></span><h2>How I work through a problem</h2></div></div>
+      <div class="method-row">
+        <div class="method-step"><svg class="method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg><span class="step-num">01</span><h4>Observe</h4><p>Floor walk, process mapping, data collection at the source</p></div>
+        <div class="method-step"><svg class="method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17l4-4 3 2 6-7 5 5"/><path d="M3 21h18"/></svg><span class="step-num">02</span><h4>Measure</h4><p>Quantify the gap — lead time, downtime, defect rate</p></div>
+        <div class="method-step"><svg class="method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="10" r="6.5"/><path d="M15 15l5 5"/></svg><span class="step-num">03</span><h4>Analyze</h4><p>Pareto, Ishikawa, 5 Why to isolate root causes</p></div>
+        <div class="method-step"><svg class="method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l7-7 4 4 5-6"/><path d="M15 8h5v5"/></svg><span class="step-num">04</span><h4>Improve</h4><p>Model and test scenarios before recommending a change</p></div>
+        <div class="method-step"><svg class="method-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 11l2 2 4-4"/></svg><span class="step-num">05</span><h4>Report</h4><p>Document results honestly, including what didn't work</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ DOCUMENTS ============ -->
+<main id="page-documents" class="page" data-page="documents">
+  <section class="block" style="padding-top:48px;">
+    <div class="wrap">
+      <div class="sec-head"><div class="htitle"><span class="bar"></span><h2>Education</h2></div><span class="sec-idx">06 — documents</span></div>
+      <div class="two-col">
+        <div>
+          <div class="edu-item">
+            <div class="edu-top"><span class="edu-title">Diplôme d'Ingénieur d'État — Génie Industriel</span><span class="edu-date">2025 — 2027</span></div>
+            <div class="edu-org">ENSA — Safi</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-top"><span class="edu-title">Licence Sciences et Techniques — Génie Mécanique (Mention Bien)</span><span class="edu-date">2024 — 2025</span></div>
+            <div class="edu-org">FST — Mohammedia</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-top"><span class="edu-title">Diplôme d'Études Universitaires Sciences et Techniques</span><span class="edu-date">2021 — 2024</span></div>
+            <div class="edu-org">FST — Mohammedia</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-top"><span class="edu-title">Baccalauréat Sciences Expérimentales (Mention Très Bien)</span><span class="edu-date">2020 — 2021</span></div>
+            <div class="edu-org">Lycée Idriss Elharti</div>
+          </div>
+        </div>
+        <div>
+          <span class="col-label">Certificates &amp; simulations</span>
+          <div class="cert-item"><span class="cert-mark mono">01</span><div><div class="cert-name">Lean Six Sigma — White Belt</div><div class="cert-desc">Introduction to continuous-improvement tools and the Lean Six Sigma approach</div></div></div>
+          <div class="cert-item"><span class="cert-mark mono">02</span><div><div class="cert-name">Allison — Mechanical Engineering</div><div class="cert-desc">Internal combustion engine job simulation</div></div></div>
+          <div class="cert-item"><span class="cert-mark mono">03</span><div><div class="cert-name">Siemens Mobility</div><div class="cert-desc">Operations Industrial Engineer job simulation</div></div></div>
+          <div class="cert-item"><span class="cert-mark mono">04</span><div><div class="cert-name">Ford — EV Engineering</div><div class="cert-desc">Advanced job simulation</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="rule">
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><div class="htitle"><span class="bar"></span><h2>Downloads</h2></div></div>
+      <p class="sec-note">Add your own files with these exact names to the repo root to make these links live.</p>
+      <div class="doc-grid">
+        <a class="doc-card" href="cv.pdf" download>
+          <svg class="doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+          <span class="doc-name">Full CV (PDF)</span><span class="doc-note">cv.pdf</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ CONTACT ============ -->
+<main id="page-contact" class="page" data-page="contact">
+  <section class="block contact-cta" style="padding-top:48px;">
+    <div class="wrap">
+      <div class="sec-head"><div class="htitle"><span class="bar"></span><h2>Contact</h2></div><span class="sec-idx">07 — contact</span></div>
+      <div class="contact-inner">
+        <div>
+          <p>Open to internships and first opportunities in supply chain, procurement and stock management — and to a PFE from February 2027.</p>
+          <div class="contact-links" style="margin-top:22px;">
+            <a href="mailto:bouzalmdakhalid2@gmail.com">bouzalmdakhalid2@gmail.com</a>
+            <a href="tel:+212631730126">06 31 73 01 26</a>
+            <a href="https://linkedin.com/in/khalid-bouzalma" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/khalid1v" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <a class="btn btn-solid" href="cv.pdf" download>Download CV</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-row">
+    <span>© 2026 Khalid Bouzalmda — Casablanca, Morocco</span>
+    <span>Built with GitHub Pages</span>
+  </div>
+</footer>
+
+<noscript><style>.page{display:block !important;}</style></noscript>
+<script src="script.js"></script>
 </body>
 </html>

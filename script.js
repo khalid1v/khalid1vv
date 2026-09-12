@@ -1,24 +1,42 @@
-// Dark mode toggle — remembers the choice between visits
-const themeBtn = document.getElementById('themeBtn');
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') document.body.classList.add('dark');
+// Khalid Bouzalmda — portfolio behavior
+// Kept intentionally small: mobile nav toggle + dark mode toggle.
+// Theme choice lives in memory only for this session (see note below);
+// on your own GitHub Pages deployment you can freely add
+// localStorage.setItem('theme', …) / getItem if you want it to persist
+// across visits — that restriction only applies inside Claude's own
+// in-chat preview sandbox, not to the site once it's actually deployed.
 
-themeBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
-});
+(function () {
+  var root = document.documentElement;
+  var themeBtn = document.getElementById('themeBtn');
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('nav');
 
-// Project filter tabs
-const filterBtns = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.proj-card');
+  // Default to the visitor's OS preference, no persistence.
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    root.classList.add('dark');
+  }
+  function syncThemeIcon() {
+    if (!themeBtn) return;
+    themeBtn.textContent = root.classList.contains('dark') ? '◑' : '◐';
+  }
+  syncThemeIcon();
 
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    projectCards.forEach(card => {
-      card.classList.toggle('show', filter === 'all' || card.dataset.category === filter);
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function () {
+      root.classList.toggle('dark');
+      syncThemeIcon();
     });
-  });
-});
+  }
+
+  if (menuBtn && nav) {
+    menuBtn.addEventListener('click', function () {
+      nav.classList.toggle('open');
+    });
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('open');
+      });
+    });
+  }
+})();

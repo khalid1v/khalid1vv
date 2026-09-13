@@ -333,14 +333,14 @@ html.dark .proj-topbar{ background:var(--surface-3); }
 .lang-item span{ color:var(--ink-soft); font-family:var(--font-mono); font-size:12.5px; }
 
 /* ================= CONTACT / FOOTER ================= */
-.contact-cta{ background:var(--ink); color:var(--paper); }
+.contact-cta{ background:var(--ink); color:#F3F4F1; }
 html.dark .contact-cta{ background:var(--surface-2); }
-.contact-cta .sec-head h2, .contact-cta .sec-idx{ color:var(--paper); }
+.contact-cta .sec-head h2, .contact-cta .sec-idx{ color:#F3F4F1; }
 .contact-inner{ display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:28px; }
 .contact-inner p{ color:#B9BEC2; max-width:44ch; font-size:15px; }
 .contact-links{ display:flex; gap:22px; flex-wrap:wrap; }
-.contact-links a{ color:var(--paper); text-decoration:none; font-size:15px; border-bottom:1px solid rgba(255,255,255,.28); padding-bottom:3px; }
-.contact-links a:hover{ border-color:var(--paper); }
+.contact-links a{ color:#F3F4F1; text-decoration:none; font-size:15px; border-bottom:1px solid rgba(255,255,255,.28); padding-bottom:3px; }
+.contact-links a:hover{ border-color:#F3F4F1; }
 .contact-cta .btn-solid{ background:var(--paper); border-color:var(--paper); color:var(--ink); }
 .contact-cta .btn-solid:hover{ background:var(--signal); border-color:var(--signal); color:#fff; }
 

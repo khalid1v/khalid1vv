@@ -109,6 +109,24 @@ var PROJECTS = [
     objective: "Automate the entries/exits log and add threshold-based alerts, without requiring new software.",
     method: "Built the tracking and alerting logic entirely in Excel/VBA.",
     results: "A working, dependency-free tool usable by teams already working in Excel."
+  },
+  {
+    id: "powerbi-job-dashboard",
+    title: "Data Job Skill & KPI Dashboard (V2)",
+    category: "Data & Decision Support · Dashboard",
+    date: "Self-directed",
+    images: ["powerbi-job-dashboard-overview.png", "powerbi-job-dashboard-skills-pay.png"],
+    summary: "Upgraded a foundational data-jobs dashboard into a fully modeled Power BI application — automated ETL, relational data modeling and custom DAX measures to track in-demand skills and pay across data roles.",
+    kpis: [
+      { value: "300K", label: "job-posting rows processed via Power Query ETL" },
+      { value: "+54%", label: "median pay, high-skill vs. low-skill data roles" }
+    ],
+    tools: ["Power BI", "Power Query", "DAX", "ETL", "Data Modeling"],
+    context: "Following an initial, simpler version of a data-jobs dashboard, wanted to push further into Power BI's modeling and calculation layer through a self-guided course.",
+    objective: "Upgrade the dashboard from a basic job-count view into an application capable of tracking specific data-science skills and job requirements.",
+    data: "A public dataset of data-related job postings — nearly 300,000 rows across job-posting and skills tables.",
+    method: "Used Power Query to extract, clean and transform the raw data (ETL), then built a relational data model connecting the job-postings and skills tables. Wrote custom DAX measures for calculations such as median salary and conditional metrics (e.g. salary by whether a posting explicitly required a degree), and built KPI visuals to surface the most in-demand skills and highest-paying roles.",
+    results: "The dashboard shows a clear, positive relationship between skill breadth and pay across data roles — e.g. Senior Data Engineer postings average both the most skills per listing (7.0) and among the highest median pay (~$146.5K), while Business Analyst postings sit at the low end on both (2.9 skills/listing, ~$95K)."
   }
 ];
 

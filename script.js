@@ -4,7 +4,7 @@
 // compact card, the home teaser, and the full case-study page are
 // all generated from that single object, so nothing else needs editing.
 //
-// Note on persistence: theme choice lives in memory only for this
+// Note on persistence: theme choice lives in memory only for this 
 // session. On your own GitHub Pages deployment you can add
 // localStorage.setItem('theme', …)/getItem if you want it to persist
 // across visits — that restriction only applies inside Claude's own

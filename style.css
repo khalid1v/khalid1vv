@@ -313,16 +313,16 @@ html.dark .proj-topbar{ background:var(--surface-3); }
 
 .cert-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
 @media (max-width:640px){ .cert-grid{ grid-template-columns:1fr; } }
-.cert-card{ border:1px solid var(--line); background:var(--surface); overflow:hidden; }
-.cert-thumb{ aspect-ratio:16/10; background:var(--surface-2); display:flex; align-items:center; justify-content:center; border-bottom:1px solid var(--line); position:relative; }
-.cert-thumb img{ width:100%; height:100%; object-fit:cover; cursor:zoom-in; }
-.cert-thumb.placeholder{ flex-direction:column; gap:8px; color:var(--ink-faint); }
-.cert-thumb.placeholder svg{ width:26px; height:26px; }
-.cert-thumb.placeholder span{ font-family:var(--font-mono); font-size:10.5px; text-align:center; padding:0 12px; }
-.cert-info{ padding:14px 16px; }
-.cert-name{ font-size:14px; font-weight:500; }
-.cert-org{ font-size:12.5px; color:var(--accent); margin-top:2px; }
-.cert-date{ font-family:var(--font-mono); font-size:11px; color:var(--ink-faint); margin-top:6px; }
+.cert-card{ border:1px solid var(--line); background:var(--surface); padding:18px 20px; display:flex; gap:14px; align-items:flex-start; }
+.cert-icon{ width:34px; height:34px; flex-shrink:0; border:1px solid var(--line-strong); background:var(--accent-tint); color:var(--accent-ink); display:flex; align-items:center; justify-content:center; }
+.cert-icon svg{ width:17px; height:17px; }
+.cert-info{ min-width:0; }
+.cert-name{ font-size:14px; font-weight:600; line-height:1.35; }
+.cert-org{ font-size:12.5px; color:var(--accent); margin-top:4px; }
+.cert-date{ font-family:var(--font-mono); font-size:11px; color:var(--ink-faint); }
+.cert-desc{ font-size:12.5px; color:var(--ink-soft); margin-top:6px; line-height:1.5; }
+.cert-skills{ display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+.cert-skills .chip{ font-size:10.5px; padding:3px 8px; }
 
 .lightbox{ position:fixed; inset:0; background:rgba(10,12,14,.86); display:none; align-items:center; justify-content:center; z-index:100; padding:32px; }
 .lightbox.open{ display:flex; }

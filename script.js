@@ -111,22 +111,22 @@ var PROJECTS = [
     results: "A working, dependency-free tool usable by teams already working in Excel."
   },
   {
-    id: "powerbi-job-dashboard",
-    title: "Data Job Skill & KPI Dashboard (V2)",
+    id: "powerbi-practice",
+    title: "Power BI Practice",
     category: "Data & Decision Support · Dashboard",
     date: "Self-directed",
-    images: ["powerbi-job-dashboard-overview.png", "powerbi-job-dashboard-skills-pay.png"],
-    summary: "Upgraded a foundational data-jobs dashboard into a fully modeled Power BI application — automated ETL, relational data modeling and custom DAX measures to track in-demand skills and pay across data roles.",
+    images: ["supply-chain-dashboard.png", "powerbi-job-dashboard-overview.png", "powerbi-job-dashboard-skills-pay.png"],
+    summary: "Two Power BI dashboards built to practice data modeling, DAX measures and Power Query ETL on public datasets: a supply chain KPI dashboard and a data-jobs market analysis. Practice work on public data, not client deliverables — hands-on skill-building in a tool most supply chain and analytics roles require.",
     kpis: [
       { value: "300K", label: "job-posting rows processed via Power Query ETL" },
       { value: "+54%", label: "median pay, high-skill vs. low-skill data roles" }
     ],
     tools: ["Power BI", "Power Query", "DAX", "ETL", "Data Modeling"],
-    context: "Following an initial, simpler version of a data-jobs dashboard, wanted to push further into Power BI's modeling and calculation layer through a self-guided course.",
-    objective: "Upgrade the dashboard from a basic job-count view into an application capable of tracking specific data-science skills and job requirements.",
-    data: "A public dataset of data-related job postings — nearly 300,000 rows across job-posting and skills tables.",
-    method: "Used Power Query to extract, clean and transform the raw data (ETL), then built a relational data model connecting the job-postings and skills tables. Wrote custom DAX measures for calculations such as median salary and conditional metrics (e.g. salary by whether a posting explicitly required a degree), and built KPI visuals to surface the most in-demand skills and highest-paying roles.",
-    results: "The dashboard shows a clear, positive relationship between skill breadth and pay across data roles — e.g. Senior Data Engineer postings average both the most skills per listing (7.0) and among the highest median pay (~$146.5K), while Business Analyst postings sit at the low end on both (2.9 skills/listing, ~$95K)."
+    context: "Wanted hands-on practice with Power BI's modeling and calculation layer beyond basic charting, using public datasets as training material.",
+    objective: "Build dashboards that go beyond default visuals — relational data models, custom DAX measures, and KPIs that actually answer a question.",
+    data: "Two public datasets: a supply chain operations dataset (orders, suppliers, lead times, defect rates) and a data-jobs postings dataset (~300,000 rows across job-posting and skills tables).",
+    method: "Used Power Query to extract, clean and transform the raw data (ETL), then built relational data models and custom DAX measures — for example median salary by skill count, and defect rate by supplier and product type.",
+    results: "Supply chain dashboard: surfaces order volume and defect rate by supplier, product type and location. Data-jobs dashboard: shows a clear, positive relationship between skill breadth and pay — e.g. Senior Data Engineer postings average both the most skills per listing (7.0) and among the highest median pay (~$146.5K), while Business Analyst postings sit at the low end on both (2.9 skills/listing, ~$95K)."
   }
 ];
 
@@ -134,10 +134,16 @@ function statHtml(k, simulated) {
   return '<div class="stat-box' + (simulated ? ' simulated' : '') + '"><b>' + k.value + '</b><span>' + k.label + '</span></div>';
 }
 
+function mediaGalleryHtml(images, altText, cls) {
+  if (!images || !images.length) return '';
+  var imgs = images.map(function (src) {
+    return '<img src="' + src + '" alt="' + altText + '">';
+  }).join('');
+  return '<div class="' + cls + '">' + imgs + '</div>';
+}
+
 function projectCardHtml(p) {
-  var img = p.images && p.images[0]
-    ? '<img class="proj-img" src="' + p.images[0] + '" alt="' + p.title + '">'
-    : '';
+  var img = mediaGalleryHtml(p.images, p.title, 'proj-media-slider');
   var isSim = /simulat/i.test(JSON.stringify(p.kpis || []));
   var kpiHtml = (p.kpis || []).map(function (k) { return statHtml(k, /simulated/i.test(k.label)); }).join('');
   var tagsHtml = p.tools.map(function (t) { return '<span class="tag">' + t + '</span>'; }).join('');
@@ -161,12 +167,7 @@ function caseSection(num, title, html) {
 }
 
 function caseStudyHtml(p) {
-  var mediaHtml = '';
-  if (p.images && p.images.length === 2) {
-    mediaHtml = '<div class="case-media dual"><img src="' + p.images[0] + '" alt="' + p.title + '"><img src="' + p.images[1] + '" alt="' + p.title + '"></div>';
-  } else if (p.images && p.images.length === 1) {
-    mediaHtml = '<div class="case-media"><img src="' + p.images[0] + '" alt="' + p.title + '"></div>';
-  }
+    var mediaHtml = mediaGalleryHtml(p.images, p.title, 'case-media-slider');
   var kpiHtml = (p.kpis || []).map(function (k) { return statHtml(k, /simulated/i.test(k.label)); }).join('');
   var toolsHtml = p.tools.map(function (t) { return '<span class="tag">' + t + '</span>'; }).join('');
   var sections = [
